@@ -52,7 +52,6 @@ class Application:
 
     def open_contact_page(self):
         wd = self.wd
-        #self.open_contact_page()
         wd.find_element_by_link_text("add new").click()
 
     def create_contact(self, contact):

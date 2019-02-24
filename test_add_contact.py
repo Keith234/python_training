@@ -7,12 +7,13 @@ from contact import Contact
 @pytest.fixture
 def app(request):
     fixture = Application()
-    request.addfinalizer(request.destroy)
+    request.addfinalizer(fixture.destroy)
     return fixture
 
 
 def test_add_contact(app):
     app.login(username="admin", password="secret")
+    app.open_contact_page()
     app.create_contact(Contact(first_name="Kevin", middlename="Ro", lastname="Tera", nicknam="Shadow",
                                title="TTT", company="New", address="Street", home="098787677",
                                mobile="045364636363", work="64646464", fax="85463543",
