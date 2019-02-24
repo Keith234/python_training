@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.support.select import Select
 
 
@@ -12,7 +14,14 @@ class ContactHelper:
 
     def create(self, contact):
         wd = self.app.wd
+        self.open_contact_page()
         # fill contact form
+        self.fill_contact_form(contact)
+        # submit contact creation
+        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+
+    def fill_contact_form(self, contact):
+        wd = self.app.wd
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys(contact.first_name)
@@ -82,5 +91,16 @@ class ContactHelper:
         wd.find_element_by_name("notes").click()
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(contact.notes)
-        # submit contact creation
-        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+
+    def delete_first_contact(self):
+        wd = self.app.wd
+        wd.find_element_by_css_selector('td [type="checkbox"]').click()
+        wd.find_element_by_css_selector('div [value="Delete"]').click()
+        wd.switch_to_alert().accept()
+        time.sleep(5)
+
+    def modify_first_contact(self, contact):
+        wd = self.app.wd
+        wd.find_element_by_css_selector('img[title="Edit"]').click()
+        self.fill_contact_form(contact)
+        wd.find_element_by_name('update').click()
