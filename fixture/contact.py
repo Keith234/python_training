@@ -1,5 +1,7 @@
 import time
 
+from model.contact import Contact
+
 
 class ContactHelper:
 
@@ -59,3 +61,15 @@ class ContactHelper:
     def count(self):
         wd = self.app.wd
         return len(wd.find_elements_by_css_selector('img[title="Edit"]'))
+
+    def get_contact_list(self):
+        wd = self.app.wd
+        self.app.open_home_page()
+        contacts = []
+        for element in wd.find_elements_by_css_selector('tr[name = "entry"]'):
+            cells = element.find_elements_by_tag_name("td")
+            lastname = cells[1].text
+            first_name = cells[2].text
+            id = element.find_element_by_name("selected[]").get_attribute("id")
+            contacts.append(Contact(lastname=lastname, first_name=first_name, id=id))
+        return contacts
