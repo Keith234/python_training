@@ -2,6 +2,7 @@ from model.contact import Contact
 
 
 def test_modify_first_contact(app):
+    app.open_home_page()
     old_contacts = app.contact.get_contact_list()
     if app.contact.count() == 0:
         app.contact.create(Contact(first_name="Nana", middlename="Ver", lastname="Ko"))
@@ -19,6 +20,7 @@ def test_modify_first_contact(app):
 
 
 def test_modify_first_contact_name(app):
+    app.open_home_page()
     old_contacts = app.contact.get_contact_list()
     if app.contact.count() == 0:
         app.contact.create(Contact(first_name="Nana", middlename="Ver", lastname="Ko"))

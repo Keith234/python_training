@@ -2,6 +2,7 @@ from model.contact import Contact
 
 
 def test_delete_contact(app):
+    app.open_home_page()
     old_contacts = app.contact.get_contact_list()
     if app.contact.count() == 0:
         app.contact.create(Contact(first_name="Nana", middlename="Ver", lastname="Ko"))
