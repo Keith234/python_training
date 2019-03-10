@@ -22,7 +22,6 @@ class ContactHelper:
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
         self.contact_cache = None
 
-
     def chenge_contact_field_value(self, field_name, text):
         if text is not None:
             wd = self.app.wd
@@ -48,16 +47,25 @@ class ContactHelper:
         self.chenge_contact_field_value("email3", contact.email3)
 
     def delete_first_contact(self):
+        self.delete_contact_by_index(0)
+
+    def select_contact_by_index(self, index):
         wd = self.app.wd
-        wd.find_element_by_css_selector('td [type="checkbox"]').click()
-        wd.find_element_by_css_selector('div [value="Delete"]').click()
+        wd.find_elements_by_css_selector('img[title="Edit"]')[index].click()
+
+    def delete_contact_by_index(self, index):
+        wd = self.app.wd
+        self.select_contact_by_index(index)
         wd.switch_to_alert().accept()
         time.sleep(5)
         self.contact_cache = None
 
     def modify_first_contact(self, contact):
+        self.modify_contact_by_index(0, contact)
+
+    def modify_contact_by_index(self, index, contact):
         wd = self.app.wd
-        wd.find_element_by_css_selector('img[title="Edit"]').click()
+        self.select_contact_by_index(index)
         self.fill_contact_form(contact)
         wd.find_element_by_name('update').click()
         self.contact_cache = None
