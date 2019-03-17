@@ -5,8 +5,9 @@ import random
 import string
 
 
+
 def random_string(prefix, maxlen):
-    symbols = string.ascii_letters + string.digits + " " * 10
+    symbols = string.ascii_letters + string.digits
     return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
 
 
@@ -24,6 +25,7 @@ testdata = [Contact(first_name="", middlename="", lastname="", nicknam="",
                     email3=random_string("email3", 10))
             for i in range(5)
             ]
+
 
 
 @pytest.mark.parametrize("contact", testdata, ids=[repr(x) for x in testdata])
