@@ -25,6 +25,7 @@ class Application:
         wd = self.wd
         wd.get(self.base_url)
 
+
     def destroy(self):
         self.wd.quit()
 
