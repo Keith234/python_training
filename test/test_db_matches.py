@@ -1,6 +1,6 @@
 from model.contact import Contact
 from model.group import Group
-from timeit import timeit
+
 
 def test_group_list(app, db):
     ui_list = app.group.get_group_list()
