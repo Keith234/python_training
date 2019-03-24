@@ -59,10 +59,28 @@ class ContactHelper:
         cell = row.find_elements_by_tag_name("td")[7]
         cell.find_element_by_tag_name("a").click()
 
+    def open_contact_to_edit_by_id(self, id):
+        wd = self.app.wd
+        self.app.open_home_page()
+        # find a row
+        row = wd.find_element_by_css_selector("input[id='%s']" % id)
+        # find a cell
+        cell = row.find_elements_by_tag_name("td")[7]
+        cell.find_element_by_tag_name("a").click()
+
+
     def delete_contact_by_index(self, index):
         wd = self.app.wd
         self.app.open_home_page()
         self.open_contact_to_edit_by_index(index)
+        wd.find_element_by_css_selector('div [value="Delete"]').click()
+        time.sleep(5)
+        self.contact_cache = None
+
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        self.app.open_home_page()
+        self.open_contact_to_edit_by_id(id)
         wd.find_element_by_css_selector('div [value="Delete"]').click()
         time.sleep(5)
         self.contact_cache = None

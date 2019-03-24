@@ -25,6 +25,9 @@ class Application:
         wd = self.wd
         wd.get(self.base_url)
 
+    def open_contact_page(self):
+        wd = self.wd
+        wd.
 
     def destroy(self):
         self.wd.quit()
