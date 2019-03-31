@@ -1,4 +1,5 @@
 import time
+from selenium.webdriver.common.keys import Keys
 
 from model.contact import Contact
 import re
@@ -59,10 +60,18 @@ class ContactHelper:
         cell = row.find_elements_by_tag_name("td")[7]
         cell.find_element_by_tag_name("a").click()
 
+    def select_contact_checkbox_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[id='%s']" % id).click()
+
     def open_contact_to_edit_by_id(self, id):
         wd = self.app.wd
         self.app.open_home_page()
         wd.find_element_by_css_selector("a[href='edit.php?id=%s']" % id).click()
+
+    def add_contact_in_group_by_id(self):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[name='add']").click()
 
     def delete_contact_by_index(self, index):
         wd = self.app.wd
@@ -159,3 +168,13 @@ class ContactHelper:
         work = re.search("W: (.*)", text).group(1)
         secondaryphone = re.search("P: (.*)", text).group(1)
         return Contact(home=home, mobile=mobile, work=work, secondaryphone=secondaryphone)
+
+    def open_group_page_with_members(self, id):
+        wd = self.app.wd
+        wd.get("http://localhost/addressbook/?group=%s" % id)
+
+    def delete_contact_from_group_by_id(self, id):
+        wd = self.app.wd
+        self.select_contact_checkbox_by_id(id)
+        wd.find_element_by_css_selector('input[name="remove"]').click()
+

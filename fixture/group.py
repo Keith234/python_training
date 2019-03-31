@@ -104,6 +104,11 @@ class GroupHelper:
                 self.group_cache.append(Group(name=text, id=id))
         return list(self.group_cache)
 
+    def select_group_from_group_dropdown_menu(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("select[name='to_group").click()
+        wd.find_element_by_css_selector("select[name='to_group'] option[value='%s']" % id).click()
+
     def delete_group_by_id(self, id):
         wd = self.app.wd
         self.open_groups_page()
