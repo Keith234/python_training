@@ -1,5 +1,4 @@
 import time
-from selenium.webdriver.common.keys import Keys
 
 from model.contact import Contact
 import re
@@ -177,4 +176,3 @@ class ContactHelper:
         wd = self.app.wd
         self.select_contact_checkbox_by_id(id)
         wd.find_element_by_css_selector('input[name="remove"]').click()
-
