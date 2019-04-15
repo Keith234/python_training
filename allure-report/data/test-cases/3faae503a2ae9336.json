@@ -1,0 +1,171 @@
+{
+  "uid" : "3faae503a2ae9336",
+  "name" : "test_add_group[None : nameUfxLfE; headerIb; footermunbHCHyGySJPgi1]",
+  "fullName" : "test.test_add_group#test_add_group[None : nameUfxLfE; headerIb; footermunbHCHyGySJPgi1]",
+  "historyId" : "cb0efa035d25a9605f61968209730e68",
+  "time" : {
+    "start" : 1555356754224,
+    "stop" : 1555356755403,
+    "duration" : 1179
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "stop",
+    "time" : {
+      "start" : 1555356733286,
+      "stop" : 1555356733286,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1555356754163,
+      "stop" : 1555356754222,
+      "duration" : 59
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "check_ui",
+    "time" : {
+      "start" : 1555356754223,
+      "stop" : 1555356754223,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1555356733286,
+      "stop" : 1555356733296,
+      "duration" : 10
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "68e84c6829bf33f",
+      "name" : "log",
+      "source" : "68e84c6829bf33f.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "2ab7b4a76d52689e",
+      "name" : "stdout",
+      "source" : "2ab7b4a76d52689e.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "d5f025a29afa6b78",
+      "name" : "stderr",
+      "source" : "d5f025a29afa6b78.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1555356755413,
+      "stop" : 1555356756486,
+      "duration" : 1073
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "db::fin",
+    "time" : {
+      "start" : 1555356755410,
+      "stop" : 1555356755410,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_add_group"
+  }, {
+    "name" : "host",
+    "value" : "WIN-P4KBO3NE04P"
+  }, {
+    "name" : "thread",
+    "value" : "6492-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_add_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "json_groups",
+    "value" : "None : nameUfxLfE; headerIb; footermunbHCHyGySJPgi1"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3faae503a2ae9336.json",
+  "parameterValues" : [ "None : nameUfxLfE; headerIb; footermunbHCHyGySJPgi1" ]
+}

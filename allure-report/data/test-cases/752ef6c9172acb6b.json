@@ -1,0 +1,171 @@
+{
+  "uid" : "752ef6c9172acb6b",
+  "name" : "test_add_group[None : namee3nbs8; headerBZH9k8lgDnh9coW; footerUNqROpsor0iVkv]",
+  "fullName" : "test.test_add_group#test_add_group[None : namee3nbs8; headerBZH9k8lgDnh9coW; footerUNqROpsor0iVkv]",
+  "historyId" : "f61b502cf4a2aab6ab3f29b40185a083",
+  "time" : {
+    "start" : 1555356753036,
+    "stop" : 1555356754153,
+    "duration" : 1117
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "stop",
+    "time" : {
+      "start" : 1555356733286,
+      "stop" : 1555356733286,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1555356752970,
+      "stop" : 1555356753034,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "check_ui",
+    "time" : {
+      "start" : 1555356753034,
+      "stop" : 1555356753035,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1555356733286,
+      "stop" : 1555356733296,
+      "duration" : 10
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "9219e7b5bdf703d",
+      "name" : "log",
+      "source" : "9219e7b5bdf703d.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "d7de379f3083a526",
+      "name" : "stdout",
+      "source" : "d7de379f3083a526.txt",
+      "type" : "text/plain",
+      "size" : 0
+    }, {
+      "uid" : "610b2e9b723fc387",
+      "name" : "stderr",
+      "source" : "610b2e9b723fc387.txt",
+      "type" : "text/plain",
+      "size" : 0
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1555356755413,
+      "stop" : 1555356756486,
+      "duration" : 1073
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "db::fin",
+    "time" : {
+      "start" : 1555356755410,
+      "stop" : 1555356755410,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_add_group"
+  }, {
+    "name" : "host",
+    "value" : "WIN-P4KBO3NE04P"
+  }, {
+    "name" : "thread",
+    "value" : "6492-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_add_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "json_groups",
+    "value" : "None : namee3nbs8; headerBZH9k8lgDnh9coW; footerUNqROpsor0iVkv"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "752ef6c9172acb6b.json",
+  "parameterValues" : [ "None : namee3nbs8; headerBZH9k8lgDnh9coW; footerUNqROpsor0iVkv" ]
+}
