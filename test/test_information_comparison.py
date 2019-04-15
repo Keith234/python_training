@@ -16,7 +16,7 @@ def test_information_comparison_between_homepage_and_edit_page(app):
     assert contact_from_home_page.all_emails_from_home_page == merge_emails_like_on_home_page(contact_from_edit_page)
 
 
-def test_assert_all_members_from_home_page_with_db(app, db):
+def test_information_comparison_between_homepage_and_data_base(app, db):
     if len(db.get_contact_list()) == 0:
         app.contact.create(Contact(first_name="Nana", middlename="Ver", lastname="Ko"))
     else:
